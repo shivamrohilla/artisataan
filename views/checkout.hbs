@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <title>E-commerce Project</title>
+    <link rel="stylesheet" href="css/checkout.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <script src="scripts/jquery.js"></script>
+    <script async defer src="scripts/script.js"></script>
+
+   </head>
+  <body>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-black" >
+        <div class="container" >
+          <a href="#" class="navbar-brand" style="font-family: 'Pangolin', cursive; font-size: 40px;" id="logo"><img src="images/logoo.png" alt="" width="100" height="100"></a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a href="./index"class="nav-link">Home</a>
+              </li>
+               <li>
+            <a href="#">PRODUCTS</a>
+            <ul class="dropdown">
+                <li><a href="./oil.html">Oil painting</a></li>
+                <li><a href="./water.html">Watercolor painting</a></li>
+                <li><a href="./digital.html">Digital painting</a></li>
+				        <li><a href="./acrylic.html">Acrylic painting</a></li>
+            </ul>
+        </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about-sec" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#cnt" class="nav-link">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{path}}" class="nav-link">{{s}}</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"><i class="fas fa-shopping-cart fa-2x"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!--End of NAv-->
+
+ <!-- Product section -->
+ <section id="products" class="products py-5">
+  <div class="container">
+    <!-- section title -->
+    <div class="row">
+      <div class="col-10 mx-auto col-sm-6 text-center">
+        <h1 class="text-capitalize product-title" style="color: black;">CHECKOUT</h1>
+      </div>
+    </div>
+
+    <div class="row">
+
+            <a href="/">Back to shopping</a>
+    </div>
+    <br>
+
+    <div class="row" style=" height: 2px; background: black; "></div>
+    <br>
+
+      <div class="row">
+
+        <div class="col-2">
+
+        </div>
+
+        <div class="col-2" style="text-align: center; line-height: 100px;">
+         <h4>Item</h4>
+        </div>
+
+        <div class=" col-2" style="text-align: center; line-height: 100px;">
+
+           <h4>Qty</h4>
+
+        </div>
+        
+        <div class=" col-2" style="text-align: center; line-height: 100px;">
+
+            <h4>Price</h4>
+ 
+        </div>
+
+        <div class=" col-4" style="text-align: center; line-height: 100px;">
+
+            <h4>Amount</h4>
+ 
+        </div>
+    </div>
+     {{#each items as |item|}}
+          <div class="row">
+
+        <div class="col-2">
+            <span> <img src="{{item.src}}" alt="" height='100px'></span>
+        </div>
+
+        <div class="col-2" style="text-align: center; line-height: 100px;">
+         Painting
+        </div>
+
+        <div class=" col-2" style="text-align: center; line-height: 100px;">
+
+         <input class="qty" type="number" style="height: 40px; width: 60px;" value = "{{item.value}}" name="{{item.src}}">
+
+        </div>
+
+        <div class=" col-2" style="text-align: center; line-height: 100px;">
+
+            {{item.price}}
+   
+        </div>
+
+
+        <div class="col-3" style="text-align: center; line-height: 100px;">
+
+            {{item.value}} X {{item.price}} = {{ item.amount}}
+   
+        </div>
+
+
+        <div class="col-1" style="text-align: center; line-height: 100px;">
+
+            <button name="{{item.src}}" class="btn-remove" style=" border: none; background : white; "> <i class="fas fa-trash-alt"></i> </button>
+   
+        </div>
+
+        
+
+    </div>
+    <br>
+     {{/each}}
+   
+    <br>
+    <br>
+
+
+    <div class="row" style=" height: 1px; background: black; "></div>
+    <div class="row">
+
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+
+        
+
+        <div class="col-4">
+            <span><h5 style="display: inline;" >Order Total</h5></span> 
+            <span>= {{total}}</span>
+        </div>
+
+
+
+    </div>
+    <div class="row" style=" height: 1px; background: black; "></div>
+
+
+    
+  </div>
+</section>
+<!-- end of store section -->
+  <!---End of Product Section===-->
+  <!---About Section=====-->
+  <section id="about-sec">
+     <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 text-center">
+          <img src="images/logoo.png" width="450" height="150" 
+          class="img-fluid watch-img">
+        </div>
+        <div class="col-lg-7 text-lg-right  text-center text-color about-text">
+          <h1 >About Company</h1>
+          <p class="text">It is a platform where you can discover some great artworks and masterpeice.
+            <b>Artistan</b> believes that the digital world is an incredible tool for buying art, spreading art around the world and allowing people to purchase pieces that they love, whether it is by an emerging African artist or a more established contemporary French painter or even a rising star of street art.
+          </p>
+        </div>
+      </div>
+      </div>
+      </section>
+      <!---End of About Section---->
+      <!--Best Seller Products-->
+      <section class="seller py-5">
+        <div class="container">
+          <!--Section title-->
+          <div class="row mb-5">
+            <div class="col d-flex flex-wrap text-uppercase justify-content-center">
+              <h1 class="font-weight-bold align-self-center mx-1">
+                Best Seller Products
+              </h1>
+            </div>
+          </div>
+          <!---End of Title-->
+          <div class="row">
+           <div class="col-sm-6 ">
+              <div class="seller-item">
+                <img src="images/the-new-york-public-library-4BXWIQoS8Fo-unsplash.jpg" alt="" class="img-fluid photo">
+                <p>Lorem ipsum dolor sit amet.</p>
+               </div>
+            </div>
+            <!--End of first column-->
+            <div class="col-sm-6 d-flex flex-column justify-content-between">
+              <div class="row">
+                <!--first item-->
+                <div class="col-sm-6">
+                  <div class="seller-item">
+                    <img src="images/sofia-palese-o7nM4uch3oQ-unsplash.jpg" alt="" class="img-fluid seller-img">
+                    
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
+                </div>
+                <!--End of 1st item-->
+                 <!--first item-->
+                 <div class="col-sm-6">
+                  <div class="seller-item">
+                    <img src="images/birmingham-museums-trust-RRn7VvZCbas-unsplash (1).jpg" alt="" class="img-fluid seller-img">
+                    
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
+                </div>
+                <!--End of 1st item-->       
+              </div>
+              <!--end of row-->
+              <div class="row">
+                <!--first item-->
+                <div class="col-sm-6">
+                  <div class="seller-item">
+                    <img src="images/elia-pellegrini-J-Kf1Ca1Zbc-unsplash.jpg" alt="" class="img-fluid seller-img
+                    img-top">
+                    
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
+                </div>
+                <!--End of 1st item-->
+                 <!--first item-->
+                 <div class="col-sm-6">
+                  <div class="seller-item">
+                    <img src="images/IMG_20200606_212632_129.jpg" alt="" class="img-fluid seller-img
+                    img-top">
+                    
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
+                </div>
+                <!--End of 1st item-->       
+              </div>
+            </div>
+          </div>
+         </div> 
+      </section>
+      <!---End of Best Seller-->
+      <!--Contact us Section-->
+       <!--Contact US-->
+    <section class="contact py-5">
+      <div class="container">
+          <h2 class="section-heading" id ="cnt">Contact Us</h2>
+          <form class="col-lg-6 offset-lg-3">
+              <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+              <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="Enter name">
+              </div>
+              <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" placeholder="Type your message" row="5">
+                  
+              </textarea>
+              </div>
+              <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="check">
+                  <label class="form-check-label" for="check">Subscribe to newsletter</label>
+              </div>
+              <div class="text-center">
+                  <button class="btn btn-lg btn-color cont-btn">Submit</button>
+              </div>
+          </form>
+      </div>
+  </section>
+  <!--End of Contact Section-->
+    <!--Footer-->
+    <footer class="footer mt-5">
+      <div class="text-center py-5 ">
+          <h2 class="py-3">Artistan</h2>
+         <div class="mx-auto heading-line"></div>
+       </div>
+      <div class="container">
+          <div class="row mb-3">
+              <div class="col-lg-8 offset-lg-2 text-center">
+                  <p>Artistan, an online art gallery that brings contemporary artworks to everyone. </p>
+                  <div class="justify-content-center">
+                    <i class="fab fa-facebook fa-2x"></i>
+                    <i class="fab fa-twitter fa-2x"></i>
+                    <i class="fab fa-instagram fa-2x"></i>
+                    
+                    </div>
+             </div>
+          </div>
+          <div class="copyright text-center py-3 border-top text-light">
+            <p>&copy; Copy Right Artistan</p>
+              
+          </div>
+      </div>
+
+  </footer>
+
+
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

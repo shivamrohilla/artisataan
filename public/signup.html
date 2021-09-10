@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="css/main.css">
+
+
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-black">
+        <div class="container">
+          <a href="#" class="navbar-brand" style="font-family: 'Pangolin', cursive; font-size: 40px;" id="logo"><img src="images/logoo.png" alt=""></a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a href="./index.html"class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Products</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.html#about-sec" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.html#cnt" class="nav-link">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="./login.html" class="nav-link">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"><i class="fas fa-shopping-cart fa-2x"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+<div class="containerr">
+
+    <!-- <div class="card bg-light"> -->
+    <div class="page">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center" style="color: white;">Create Account</h4>
+            <p class="text-center" style="color: white;">Get started with your free account</p>
+            <p>
+                <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
+                <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+            </p>
+            <p class="divider-text">
+                <span class="bg-light">OR</span>
+            </p>
+            <form action="http://localhost:4455/signup" method="POST">
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                 </div>
+                <input name="name" class="form-control" placeholder="Full name" type="text">
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                 </div>
+                <input name="email" class="form-control" placeholder="Email address" type="email">
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                </div>
+                <select class="custom-select" style="max-width: 120px;">
+                    <option selected="">+91</option>
+                    <option value="1">+972</option>
+                    <option value="2">+198</option>
+                    <option value="3">+701</option>
+                </select>
+                <input name="phone" class="form-control" placeholder="Phone number" type="text">
+            </div> <!-- form-group// -->
+          <!-- form-group end.// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input name ='pass' class="form-control" placeholder="Create password" type="password">
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input class="form-control" placeholder="Repeat password" type="password">
+            </div> <!-- form-group// -->                                      
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+            </div> <!-- form-group// -->      
+            <p class="text-center">Have an account? <a href="./login.html">Sign in</a> </p>                                                                 
+        </form>
+        </article>
+        </div> <!-- card.// -->
+        
+    </div> 
+        <!--container end.//-->
+        
+       
+      
+
+
+        <footer class="footer mt-5">
+            <div class="text-center py-5 ">
+                <h2 class="py-3">Artistan</h2>
+               <div class="mx-auto heading-line"></div>
+             </div>
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-lg-8 offset-lg-2 text-center">
+                        <p>Artistan, an online art gallery that brings contemporary artworks to everyone. </p>
+                        <div class="justify-content-center">
+                          <i class="fab fa-facebook fa-2x"></i>
+                          <i class="fab fa-twitter fa-2x"></i>
+                          <i class="fab fa-instagram fa-2x"></i>
+                          
+                          </div>
+                   </div>
+                </div>
+                <div class="copyright text-center py-3 border-top text-light">
+                  <p>&copy; Copy Right Artistan</p>
+                    
+                </div>
+            </div>
+      
+        </footer>
+      
+
+    
+</body>
+</html>
+
+
